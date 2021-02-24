@@ -1,5 +1,7 @@
 package com.jzjr.springmvc.springmvc_demo.dto;
 
+import com.jzjr.springmvc.springmvc_demo.constants.ServiceExceptionEnum;
+
 /**
  * 用户添加 DTO
  */

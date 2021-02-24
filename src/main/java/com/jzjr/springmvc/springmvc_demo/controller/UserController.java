@@ -104,4 +104,23 @@ public class UserController {
     public UserVO exception02() {
         throw new ServiceException(ServiceExceptionEnum.USER_NOT_FOUND);
     }
+
+
+    @GetMapping("/do_something")
+    public void doSomething() {
+        log.info("未来去火星");
+    }
+
+    @GetMapping("/current_user")
+    public UserVO currentUser() {
+        log.info("[人造机器人Robot001称为智慧生命体]");
+        return new UserVO().setId(10).setUsername(UUID.randomUUID().toString());
+    }
+
+
+    @GetMapping("/exception-03")
+    public void exception03() {
+        log.info("[人类文明面临威胁]");
+        throw new ServiceException(ServiceExceptionEnum.USER_NOT_FOUND);
+    }
 }
