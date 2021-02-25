@@ -117,7 +117,7 @@ public class UserController {
 
     @GetMapping("/exception-03")
     public void exception03() {
-        log.info("[人类文明面临威胁]");
+        log.info("[人类文明面临威胁.]");
         throw new ServiceException(ServiceExceptionEnum.USER_NOT_FOUND);
     }
 }
