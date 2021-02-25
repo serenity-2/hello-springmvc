@@ -27,7 +27,7 @@ public class UserController {
         List<UserVO> result = new ArrayList<>();
         result.add(new UserVO().setId(1).setUsername("miki"));
         result.add(new UserVO().setId(2).setUsername("sandy"));
-        result.add(new UserVO().setId(3).setUsername("helen"));
+        result.add(new UserVO().setId(3).setUsername("andi"));
         // 返回列表
         return result;
     }
@@ -61,7 +61,6 @@ public class UserController {
 
     /**
      * 更新指定用户编号的用户
-     *
      * @param updateDTO 更新用户信息 DTO
      * @return 是否修改成功
      */
@@ -75,7 +74,6 @@ public class UserController {
 
     /**
      * 删除指定用户编号的用户
-     *
      * @param id 用户编号
      * @return 是否删除成功
      */
