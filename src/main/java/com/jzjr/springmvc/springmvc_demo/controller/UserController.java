@@ -26,8 +26,8 @@ public class UserController {
         // 查询列表
         List<UserVO> result = new ArrayList<>();
         result.add(new UserVO().setId(1).setUsername("miki"));
-        result.add(new UserVO().setId(2).setUsername("sandy"));
-        result.add(new UserVO().setId(3).setUsername("helen"));
+        result.add(new UserVO().setId(2).setUsername("simens"));
+        result.add(new UserVO().setId(3).setUsername("openai"));
         // 返回列表
         return result;
     }
@@ -120,6 +120,12 @@ public class UserController {
     @GetMapping("/exception-03")
     public void exception03() {
         log.info("[人类文明面临威胁]");
+        throw new ServiceException(ServiceExceptionEnum.USER_NOT_FOUND);
+    }
+    
+     @GetMapping("/exception-04")
+    public void exception03() {
+        log.info("[规则重写]");
         throw new ServiceException(ServiceExceptionEnum.USER_NOT_FOUND);
     }
 }
