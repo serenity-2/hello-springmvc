@@ -25,9 +25,9 @@ public class UserController {
     public List<UserVO> list() {
         // 查询列表
         List<UserVO> result = new ArrayList<>();
-        result.add(new UserVO().setId(1).setUsername("moko"));
+        result.add(new UserVO().setId(1).setUsername("miki"));
         result.add(new UserVO().setId(2).setUsername("sandy"));
-        result.add(new UserVO().setId(3).setUsername("alen"));
+        result.add(new UserVO().setId(3).setUsername("helen"));
         // 返回列表
         return result;
     }
