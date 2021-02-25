@@ -25,16 +25,15 @@ public class UserController {
     public List<UserVO> list() {
         // 查询列表
         List<UserVO> result = new ArrayList<>();
-        result.add(new UserVO().setId(1).setUsername("yudaoyuanma"));
-        result.add(new UserVO().setId(2).setUsername("woshiyutou"));
-        result.add(new UserVO().setId(3).setUsername("chifanshuijiao"));
+        result.add(new UserVO().setId(1).setUsername("moko"));
+        result.add(new UserVO().setId(2).setUsername("sandy"));
+        result.add(new UserVO().setId(3).setUsername("alice"));
         // 返回列表
         return result;
     }
 
     /**
      * 获得指定用户编号的用户
-     *
      * @param id 用户编号
      * @return 用户
      */
