@@ -27,7 +27,7 @@ public class UserController {
         List<UserVO> result = new ArrayList<>();
         result.add(new UserVO().setId(1).setUsername("miki"));
         result.add(new UserVO().setId(2).setUsername("sandy"));
-        result.add(new UserVO().setId(3).setUsername("deepmind"));
+        result.add(new UserVO().setId(3).setUsername("helen"));
         // 返回列表
         return result;
     }
@@ -84,8 +84,6 @@ public class UserController {
         // 返回是否更新成功
         return success;
     }
-
-
     /**
      * 测试抛出 NullPointerException 异常
      */
