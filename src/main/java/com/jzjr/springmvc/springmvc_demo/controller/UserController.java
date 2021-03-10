@@ -4,18 +4,37 @@ import com.jzjr.springmvc.springmvc_demo.constants.ServiceExceptionEnum;
 import com.jzjr.springmvc.springmvc_demo.core.exception.ServiceException;
 import com.jzjr.springmvc.springmvc_demo.dto.UserAddDTO;
 import com.jzjr.springmvc.springmvc_demo.dto.UserUpdateDTO;
+import com.jzjr.springmvc.springmvc_demo.service.UserService;
+import com.jzjr.springmvc.springmvc_demo.service.impl.UserSeniorImpl;
 import com.jzjr.springmvc.springmvc_demo.vo.UserVO;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api")
 @Slf4j
 public class UserController {
+
+    @Resource(type = UserSeniorImpl.class)
+    private UserService userService;
+
+    @RequestMapping("/select")
+    public String getUserById(){
+       return userService.selectUserById(); //ok!
+    }
+
+    @RequestMapping("/select2")
+    public String getUserSerniorById(){
+        return userService.selectUserSeniorById(); //USER
+    }
+
     /**
      * 查询用户列表
      *
